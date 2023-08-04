@@ -1,6 +1,6 @@
 ﻿namespace TyresShopAPI.Models
 {
-    public class BasicModel
+    public class BaseModel
     {
         public Guid Id { get; set; } = Guid.NewGuid();
     }
