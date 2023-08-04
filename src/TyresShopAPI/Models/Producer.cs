@@ -2,16 +2,11 @@
 {
     public class Producer : BaseModel
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
-        public string Localization { get; set; }
+        public string Localization { get; set; } = string.Empty;
 
-        public List<Tyres> Tyres { get; set; } = new List<Tyres> { };
+        public List<Tyre> Tyres { get; set; } = new List<Tyre> { };
 
-        public Producer(string name, string localization)
-        {
-            Name = name;
-            Localization = localization;
-        }
     }
 }

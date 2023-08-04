@@ -2,7 +2,9 @@
 {
     public enum TyresType
     {
-        Winter,
-        Summer
+        None = 0,
+        Winter = 1,
+        Summer = 2,
+        MultiSeason = 3
     }
 }
