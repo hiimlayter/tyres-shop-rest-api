@@ -351,3 +351,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/src/TyresShopAPI/Persistance/Migrations/20230804093413_AddMigrationMy.cs
+/src/TyresShopAPI/Persistance/Migrations/20230804093413_AddMigrationMy.Designer.cs
+/.gitignore
