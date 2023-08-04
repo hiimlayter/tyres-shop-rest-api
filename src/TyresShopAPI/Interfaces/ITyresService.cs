@@ -1,4 +1,5 @@
-﻿using TyresShopAPI.Models;
+﻿using TyresShopAPI.Entities;
+using TyresShopAPI.Models;
 
 namespace TyresShopAPI.Interfaces
 {
