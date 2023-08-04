@@ -1,4 +1,6 @@
-﻿namespace TyresShopAPI.Models
+﻿using TyresShopAPI.Enums;
+
+namespace TyresShopAPI.Entities
 {
     public class Tyre: BaseModel
     {
@@ -19,6 +21,8 @@
         public int SizeProfile { get; set; }
 
         public int SizeDiameter { get; set; }
+
+        public bool IsDeleted { get; set; } = false;
 
         public TyresType TyresType { get; set; }
 

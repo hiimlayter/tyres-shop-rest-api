@@ -1,4 +1,7 @@
-﻿namespace TyresShopAPI.Models.Customers
+﻿using TyresShopAPI.Entites.Customers;
+using TyresShopAPI.Entities;
+
+namespace TyresShopAPI.Models.Customers
 {
     public class Adress : BaseModel
     {

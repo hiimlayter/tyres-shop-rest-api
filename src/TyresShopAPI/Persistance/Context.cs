@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TyresShopAPI.Entites;
+using TyresShopAPI.Entites.Customers;
+using TyresShopAPI.Entities;
 using TyresShopAPI.Interfaces;
 using TyresShopAPI.Models;
 using TyresShopAPI.Models.Customers;

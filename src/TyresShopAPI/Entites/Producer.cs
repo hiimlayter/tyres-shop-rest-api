@@ -1,4 +1,4 @@
-﻿namespace TyresShopAPI.Models
+﻿namespace TyresShopAPI.Entities
 {
     public class Producer : BaseModel
     {

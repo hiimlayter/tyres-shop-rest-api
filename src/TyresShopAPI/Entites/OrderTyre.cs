@@ -1,4 +1,6 @@
-﻿namespace TyresShopAPI.Models
+﻿using TyresShopAPI.Entites;
+
+namespace TyresShopAPI.Entities
 {
     public class OrderTyre : BaseModel
     {

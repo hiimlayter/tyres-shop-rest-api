@@ -19,51 +19,21 @@ namespace TyresShopAPI.Controllers
 
         [HttpGet]
         [Route("GetAllTyres")]
-        public IActionResult GetAllTyres()
+        public async Task<IActionResult> GetAllTyres()
         {
-            return Ok();
+            var result = await _tyresService.GetAllTyres();
+            
+            return Ok(result);
         }
 
         [HttpPost]
-        [Route("AddTyre")]
-        public async Task<IActionResult> AddTyre(TyreCreate model)
+        [Route("AddOrUpdateTyre")]
+        public async Task<IActionResult> AddOrUpdateTyre(TyreCreate model)
         {
             try
             {
-                await _tyresService.AddTyre(model);
+                await _tyresService.AddOrUpdateTyre(model);
 
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-
-            return Ok();
-        }
-
-        [HttpPut]
-        [Route("UpdateTyre")]
-        public async Task<IActionResult> UpdateTyre(TyreCreate model, int tyreId)
-        {
-            try
-            {
-                await _tyresService.UpdateTyre(model, tyreId);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-
-            return Ok();
-        }
-
-        [HttpDelete]
-        [Route("DeleteTyre")]
-        public async Task<IActionResult> DeleteTyre(int tyreId)
-        {
-            try
-            {
-                await _tyresService.DeleteTyre(tyreId);
             }
             catch (Exception ex)
             {
@@ -74,17 +44,30 @@ namespace TyresShopAPI.Controllers
         }
 
         [HttpGet]
-        [Route("GetTyre")]
-        public async Task<IActionResult> GetTyre(int tyreId)
+        [Route("GetTyresById/{tyreId}")]
+        public async Task<IActionResult> GetTyresById(int tyreId)
+        {
+            var result = await _tyresService.GetTyreBydId(tyreId);
+
+            return Ok(result);
+        }
+
+        [HttpDelete]
+        [Route("DeleteTyreById/{tyreId}")]
+        public async Task<IActionResult> DeleteContactById(int tyreId)
         {
             try
             {
-                return Ok(await _tyresService.GetTyre(tyreId));
+                await _tyresService.DeleteTyreById(tyreId);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception(ex.ToString());
+                throw new Exception(e.ToString());
             }
+
+
+            return Ok();
         }
+
     }
 }

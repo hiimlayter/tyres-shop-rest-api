@@ -1,6 +1,7 @@
-﻿using TyresShopAPI.Models.Customers;
+﻿using TyresShopAPI.Entites.Customers;
+using TyresShopAPI.Entities;
 
-namespace TyresShopAPI.Models
+namespace TyresShopAPI.Entites
 {
     public class Order: BaseModel
     {

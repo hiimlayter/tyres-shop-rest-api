@@ -1,6 +1,9 @@
-﻿namespace TyresShopAPI.Models
+﻿using TyresShopAPI.Entities;
+using TyresShopAPI.Enums;
+
+namespace TyresShopAPI.Models
 {
-    public class TyreCreate
+    public class TyreCreate : BaseModel
     {
         public int ProducerId { get; set; }
 
