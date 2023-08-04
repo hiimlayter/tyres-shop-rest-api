@@ -1,14 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using TyresShopAPI.Entites;
 using TyresShopAPI.Entites.Customers;
 using TyresShopAPI.Entities;
 using TyresShopAPI.Interfaces;
-using TyresShopAPI.Models;
 using TyresShopAPI.Models.Customers;
 
 namespace TyresShopAPI.Persistance
 {
-    public class Context : DbContext, IContext
+    public class Context : IdentityDbContext, IContext
     {
         public Context(DbContextOptions options) : base(options)
         {

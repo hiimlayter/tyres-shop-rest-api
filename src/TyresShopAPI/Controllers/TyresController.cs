@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TyresShopAPI.Interfaces;
 using TyresShopAPI.Models;
 
@@ -26,6 +27,7 @@ namespace TyresShopAPI.Controllers
             return Ok(result);
         }
 
+        [Authorize]
         [HttpPost]
         [Route("AddOrUpdateTyre")]
         public async Task<IActionResult> AddOrUpdateTyre(TyreCreate model)
