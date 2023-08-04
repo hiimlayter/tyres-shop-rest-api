@@ -6,6 +6,6 @@ namespace TyresShopAPI.Models
     {
         public List<OrderTyre> OrderTyres { get; set; } = new List<OrderTyre> { new OrderTyre() };
 
-        public Customer Customer { get; set; } = new Customer();
+        public Customer Customer { get; set; }
     }
 }

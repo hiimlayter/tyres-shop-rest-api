@@ -10,7 +10,7 @@
 
         public string PostalCode { get; set; } = string.Empty;
 
-        Customer Customer { get; set; } = new Customer();
+        Customer Customer { get; set; }
 
         public int CustomerId { get; set; }
     }

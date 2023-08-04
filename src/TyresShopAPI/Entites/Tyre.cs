@@ -2,7 +2,7 @@
 {
     public class Tyre: BaseModel
     {
-        public Producer Producer { get; set; } = new Producer();
+        public Producer Producer { get; set; }
 
         public int ProducerId { get; set; }
 
@@ -19,8 +19,6 @@
         public int SizeProfile { get; set; }
 
         public int SizeDiameter { get; set; }
-
-        public int TyresTypeId { get; set; }
 
         public TyresType TyresType { get; set; }
 

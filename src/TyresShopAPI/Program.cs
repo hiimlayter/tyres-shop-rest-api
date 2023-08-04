@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using TyresShopAPI.Interfaces;
 using TyresShopAPI.Persistance;
+using TyresShopAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,8 @@ builder.Services.AddDbContext<Context>(
            options.UseSqlServer(builder.Configuration.GetConnectionString("TyresShopConnection"));
        });
 
+builder.Services.AddScoped<IContext>(provider => provider.GetService<Context>());
+builder.Services.AddScoped<ITyresService, TyresService>();
 
 var app = builder.Build();
 

@@ -6,8 +6,7 @@
 
         public string LastName { get; set; } = string.Empty;
 
-        public Adress Address { get; set; } = new Adress();
-
+        public Adress Address { get; set; }
         public int AdressId { get; set; }
     }
 }

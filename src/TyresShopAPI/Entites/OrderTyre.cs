@@ -2,10 +2,10 @@
 {
     public class OrderTyre : BaseModel
     {
-        public Order Order { get; set; } = new Order();
+        public Order Order { get; set; }
         public int OrderId { get; set; }
 
-        public Tyre Tyre { get; set; } = new Tyre();
+        public Tyre Tyre { get; set; }
 
         public int TyreId { get; set; }
 
